@@ -1,9 +1,17 @@
 import React, { useState } from "react";
 import getGifs from "../requests/getGifs";
-import "../styles/search.css"
+import PropTypes from "prop-types";
+import "../styles/search.css";
 
 const Search = ({ setGifResults }) => {
   const [value, setValue] = useState("");
+
+  // useEffect((handleSubmit) => {
+  //   const handleSubmit = async (event) => {
+  //     event.preventDefault();
+  //     setGifResults(await getGifs(value));
+  //   };
+  // });
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -24,3 +32,7 @@ const Search = ({ setGifResults }) => {
 };
 
 export default Search;
+
+Search.propTypes = {
+  setGifResults: PropTypes.func.isRequired,
+};
