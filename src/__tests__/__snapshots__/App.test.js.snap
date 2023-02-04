@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App renders correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="app"
+  >
+    <img
+      alt="giphy-logo"
+      class="logo"
+      data-testid="logo"
+      src="giphy-logo.jpg"
+    />
+    <div
+      class="search"
+    >
+      <form
+        class="search-form"
+        data-testid="search-form"
+      >
+        <input
+          class="search-input"
+          data-testid="search-input"
+          type="text"
+        />
+      </form>
+    </div>
+    <div
+      class="search-results"
+    />
+    <a
+      class="page-top"
+      data-testid="page-top"
+      href="#top"
+    >
+      <svg
+        aria-hidden="true"
+        class="svg-inline--fa fa-arrow-up "
+        data-icon="arrow-up"
+        data-prefix="fas"
+        focusable="false"
+        role="img"
+        viewBox="0 0 384 512"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"
+          fill="currentColor"
+        />
+      </svg>
+    </a>
+  </div>
+</DocumentFragment>
+`;

@@ -1,7 +1,50 @@
 .search {
   margin-top: 20px;
+  width: 500px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.search-form {
+  width: 60%;
 }
 
 .search input {
-  width: 300px;
+  width: 100%;
+  border: 2px solid black;
+}
+.search input::placeholder {
+  color: black;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.limitButtons {
+  border: 2px solid black;
+  border-radius: 2px;
+}
+.search-button {
+  border: none;
+}
+#middle {
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
+
+.search-input, .search-button {
+  font-size: 15px;
+  padding: 5px;
+  background-color: transparent;
+  color: black;
+}
+
+@media only screen and (max-width: 768px) {
+  .search {
+    width: 400px;
+  }
+}
+
+@media only screen and (max-width: 481px) {
+  .search {
+    width: 300px;
+  }
 }

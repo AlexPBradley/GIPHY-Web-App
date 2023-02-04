@@ -8,3 +8,23 @@
 .search-results img {
   width: 500px;
 }
+
+.search-results .gif {
+  cursor: pointer;
+}
+.search-results .gif:hover {
+  outline: 5px solid black;
+  outline-offset: -5px;
+}
+
+@media only screen and (max-width: 768px) {
+  .search-results .gif {
+    width: 400px;
+  }
+}
+
+@media only screen and (max-width: 481px) {
+  .search-results .gif {
+    width: 300px;
+  }
+}

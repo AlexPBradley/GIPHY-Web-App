@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Expanded renders correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="expanded"
+  >
+    <div
+      class="background"
+    />
+    <img
+      alt="Gif"
+      class="gif"
+      data-testid="gif"
+    />
+  </div>
+</DocumentFragment>
+`;

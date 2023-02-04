@@ -2,12 +2,14 @@ import React from "react";
 import PropTypes from "prop-types";
 import "../styles/searchResults.css";
 
-const SearchResults = ({ results, isSelected, setSelected }) => {
+const SearchResults = ({ results, resultsCount, isSelected, setSelected }) => {
   return (
     <div className="search-results">
-      {results.map((gif) => (
+      {results?.map((gif, index) => index < resultsCount && (
         <img
+          key={gif.id}
           className="gif"
+          data-testid="gif"
           src={gif.images.downsized.url}
           alt="Gif"
           onClick={() => {
@@ -23,5 +25,5 @@ const SearchResults = ({ results, isSelected, setSelected }) => {
 export default SearchResults;
 
 SearchResults.propTypes = {
-  results: PropTypes.array.isRequired,
+  results: PropTypes.array,
 };

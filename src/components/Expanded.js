@@ -5,7 +5,13 @@ const Expanded = ({ selected, setIsSelected }) => {
   return (
     <div className="expanded">
       <div className="background" onClick={() => setIsSelected()}></div>
-      <img className="gif" src={selected.images.downsized.url} alt="Gif" />
+        <img
+          className="gif"
+          data-testid="gif"
+          src={selected?.images.downsized.url}
+          alt="Gif"
+        />
+        <div className="test">{selected.title}</div>        
     </div>
   );
 };
