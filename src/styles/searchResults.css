@@ -1,16 +1,21 @@
 .search-results {
   margin-top: 20px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 95vw;
 }
 
 .search-results img {
-  width: 500px;
+  margin-top: 20px;
+  height: 300px;
 }
 
 .search-results .gif {
   cursor: pointer;
+  margin: 5px;
+  
 }
 .search-results .gif:hover {
   outline: 5px solid black;
@@ -18,13 +23,19 @@
 }
 
 @media only screen and (max-width: 768px) {
-  .search-results .gif {
+  .search-results img {
     width: 400px;
+    height: auto;
   }
 }
 
 @media only screen and (max-width: 481px) {
-  .search-results .gif {
-    width: 300px;
+  .search-results {
+    flex-direction: column;
+    align-items: center;
   }
+    .search-results img {
+      width: 300px;
+      height: auto;
+    }
 }

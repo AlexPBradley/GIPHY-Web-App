@@ -13,6 +13,9 @@ exports[`Expanded renders correctly 1`] = `
       class="gif"
       data-testid="gif"
     />
+    <div
+      class="expanded-title"
+    />
   </div>
 </DocumentFragment>
 `;

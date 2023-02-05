@@ -12,9 +12,37 @@ exports[`Search renders correctly 1`] = `
       <input
         class="search-input"
         data-testid="search-input"
+        placeholder="Search..."
         type="text"
       />
     </form>
+    <div
+      class="limitButtons"
+    >
+      <button
+        class="search-button"
+        type="button"
+      >
+        <span
+          id="button-background"
+          style="transform: translate(0px);"
+        />
+        10
+      </button>
+      <button
+        class="search-button"
+        id="middle"
+        type="button"
+      >
+        25
+      </button>
+      <button
+        class="search-button"
+        type="button"
+      >
+        50
+      </button>
+    </div>
   </div>
 </DocumentFragment>
 `;

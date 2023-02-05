@@ -11,7 +11,7 @@ const Expanded = ({ selected, setIsSelected }) => {
           src={selected?.images.downsized.url}
           alt="Gif"
         />
-        <div className="test">{selected.title}</div>        
+        <div className="expanded-title">{selected?.title}</div>        
     </div>
   );
 };

@@ -1,14 +1,24 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import getGifs from "../requests/getGifs.js";
 import PropTypes from "prop-types";
 import "../styles/search.css";
 
-const Search = ({ setGifResults, setResultsCount }) => {
+const Search = ({ setGifResults, setResultsCount, setSearchValue }) => {
   const [value, setValue] = useState("");
+  const [limitSelected, setLimitSelected] = useState(0);
+
+  useEffect(() => {
+    document.getElementById(
+      "button-background"
+    ).style.transform = `translate(${limitSelected}px)`;
+  });
 
   const handleSubmit = async (event) => {
     event.preventDefault();
     setGifResults(await getGifs(value));
+    value
+      ? setSearchValue(value.charAt(0).toUpperCase() + value.slice(1))
+      : setSearchValue("Trending");
   };
 
   return (
@@ -30,22 +40,32 @@ const Search = ({ setGifResults, setResultsCount }) => {
         <button
           className="search-button"
           type="button"
-          onClick={() => setResultsCount(10)}
+          onClick={() => {
+            setResultsCount(10);
+            setLimitSelected(0);
+          }}
         >
+          <span id="button-background"></span>
           10
         </button>
         <button
           id="middle"
           className="search-button"
           type="button"
-          onFocus={() => setResultsCount(25)}
+          onFocus={() => {
+            setResultsCount(25);
+            setLimitSelected(28);
+          }}
         >
           25
         </button>
         <button
           className="search-button"
           type="button"
-          onClick={() => setResultsCount(50)}
+          onClick={() => {
+            setResultsCount(50);
+            setLimitSelected(55);
+          }}
         >
           50
         </button>

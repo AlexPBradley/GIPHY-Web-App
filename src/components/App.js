@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../styles/app.css";
 import Search from "./Search.js";
 import SearchResults from "./SearchResults.js";
@@ -12,20 +12,27 @@ const App = () => {
   const [gifResults, setGifResults] = useState([]);
   const [isSelected, setIsSelected] = useState(false);
   const [selected, setSelected] = useState();
-  const [resultsCount, setResultsCount] = useState(10);
-
-  if (!gifResults.length) {
-    const trending = async () => {
-      const data = await getGifs("");
-      setGifResults(data);
-    };
-    trending();
-  }
+  const [resultsCount, setResultsCount] = useState(25);
+  const [searchValue, setSearchValue] = useState("Trending");
+  
+  useEffect(() => {
+    if (gifResults.length === 0) {
+      const trending = async () => {
+        const data = await getGifs("");
+        setGifResults(data);
+      };
+      trending();
+    }
+  }, []);
 
   return (
     <div className="app">
       <img className="logo" data-testid="logo" src={logo} alt="giphy-logo" />
-      <Search setGifResults={setGifResults} setResultsCount={setResultsCount} />
+      <Search
+        setGifResults={setGifResults}
+        setResultsCount={setResultsCount}
+        setSearchValue={setSearchValue}
+      />
       {isSelected ? (
         <Expanded
           results={gifResults}
@@ -33,6 +40,7 @@ const App = () => {
           setIsSelected={setIsSelected}
         />
       ) : null}
+      <h1>{searchValue} Results</h1>
       <SearchResults
         results={gifResults}
         resultsCount={resultsCount}
