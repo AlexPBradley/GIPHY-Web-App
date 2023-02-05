@@ -15,5 +15,13 @@ describe("Expanded", () => {
     const gif = screen.getByTestId("gif");
 
     expect(gif).toBeInstanceOf(HTMLImageElement);
-  })
+  });
+
+  it("title renders", () => {
+    render(<Expanded />);
+
+    const expandedTitle = screen.getByTestId("expanded-title");
+
+    expect(expandedTitle).toBeInstanceOf(HTMLDivElement);
+  });
 });

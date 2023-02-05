@@ -21,9 +21,11 @@ exports[`Search renders correctly 1`] = `
     >
       <button
         class="search-button"
+        data-testid="search-button"
         type="button"
       >
         <span
+          data-testid="button-background"
           id="button-background"
           style="transform: translate(0px);"
         />
@@ -31,6 +33,7 @@ exports[`Search renders correctly 1`] = `
       </button>
       <button
         class="search-button"
+        data-testid="search-button"
         id="middle"
         type="button"
       >
@@ -38,6 +41,7 @@ exports[`Search renders correctly 1`] = `
       </button>
       <button
         class="search-button"
+        data-testid="search-button"
         type="button"
       >
         50

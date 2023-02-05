@@ -24,4 +24,20 @@ describe("Search", () => {
 
     expect(searchForm).toBeInstanceOf(HTMLInputElement);
   });
+
+  it("buttons renders correctly", () => {
+    render(<Search />);
+
+    const searchButtons = screen.getAllByTestId("search-button");
+
+    expect(searchButtons).toBeInstanceOf(Array);
+  });
+
+  it("button background correctly", () => {
+    render(<Search />);
+
+    const buttonBackground = screen.getByTestId("button-background");
+
+    expect(buttonBackground).toBeInstanceOf(HTMLSpanElement);
+  });
 });

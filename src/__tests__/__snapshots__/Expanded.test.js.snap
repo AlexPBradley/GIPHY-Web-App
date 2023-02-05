@@ -15,6 +15,7 @@ exports[`Expanded renders correctly 1`] = `
     />
     <div
       class="expanded-title"
+      data-testid="expanded-title"
     />
   </div>
 </DocumentFragment>

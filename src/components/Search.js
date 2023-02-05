@@ -39,18 +39,20 @@ const Search = ({ setGifResults, setResultsCount, setSearchValue }) => {
       <div className="limitButtons">
         <button
           className="search-button"
+          data-testid="search-button"
           type="button"
           onClick={() => {
             setResultsCount(10);
             setLimitSelected(0);
           }}
         >
-          <span id="button-background"></span>
+          <span id="button-background" data-testid="button-background"></span>
           10
         </button>
         <button
           id="middle"
           className="search-button"
+          data-testid="search-button"
           type="button"
           onFocus={() => {
             setResultsCount(25);
@@ -61,6 +63,7 @@ const Search = ({ setGifResults, setResultsCount, setSearchValue }) => {
         </button>
         <button
           className="search-button"
+          data-testid="search-button"
           type="button"
           onClick={() => {
             setResultsCount(50);
