@@ -30,3 +30,4 @@ See trending Gifs dislpayed on https://giphy.com/ or search to see your favorite
 
 ![Giphy-home!](./src/styles/images/giphy-home.png)
 ![Giphy-phone!](./src/styles/images/giphy-phone.png)
+![Giphy-tablet!](./src/styles/images/giphy-tablet.png)
