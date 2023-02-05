@@ -11,10 +11,10 @@ import logo from "../styles/images/giphy-logo.jpg";
 const App = () => {
   const [gifResults, setGifResults] = useState([]);
   const [isSelected, setIsSelected] = useState(false);
-  const [selected, setSelected] = useState();
+  const [selected, setSelected] = useState({});
   const [resultsCount, setResultsCount] = useState(25);
   const [searchValue, setSearchValue] = useState("Trending");
-  
+
   useEffect(() => {
     if (gifResults.length === 0) {
       const trending = async () => {
@@ -44,7 +44,7 @@ const App = () => {
       <SearchResults
         results={gifResults}
         resultsCount={resultsCount}
-        isSelected={setIsSelected}
+        setIsSelected={setIsSelected}
         setSelected={setSelected}
       />
       <a href="#top" className="page-top" data-testid="page-top">

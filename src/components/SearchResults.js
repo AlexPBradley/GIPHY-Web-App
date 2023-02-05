@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import "../styles/searchResults.css";
 
-const SearchResults = ({ results, resultsCount, isSelected, setSelected }) => {
+const SearchResults = ({ results, resultsCount, setIsSelected, setSelected }) => {
   return (
     <div className="search-results">
       {results?.map((gif, index) => index < resultsCount && (
@@ -14,7 +14,7 @@ const SearchResults = ({ results, resultsCount, isSelected, setSelected }) => {
           alt="Gif"
           onClick={() => {
             setSelected(gif);
-            isSelected(true);
+            setIsSelected(true);
           }}
         />
       ))}
@@ -26,4 +26,7 @@ export default SearchResults;
 
 SearchResults.propTypes = {
   results: PropTypes.array,
+  resultsCount: PropTypes.number,
+  setIsSelected: PropTypes.func,
+  setSelected: PropTypes.func,
 };

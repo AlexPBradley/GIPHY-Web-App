@@ -78,4 +78,6 @@ export default Search;
 
 Search.propTypes = {
   setGifResults: PropTypes.func,
+  setResultsCount: PropTypes.func,
+  setSearchValue: PropTypes.func,
 };

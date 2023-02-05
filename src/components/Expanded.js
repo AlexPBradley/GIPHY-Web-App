@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import "../styles/expanded.css";
 
 const Expanded = ({ selected, setIsSelected }) => {
@@ -17,3 +18,8 @@ const Expanded = ({ selected, setIsSelected }) => {
 };
 
 export default Expanded;
+
+Expanded.propTypes = {
+  selected: PropTypes.object,
+  setIsSelected: PropTypes.func,
+};
