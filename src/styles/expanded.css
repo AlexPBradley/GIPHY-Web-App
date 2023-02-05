@@ -26,16 +26,18 @@
   z-index: 1;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 768px) and (min-width: 481px) {
   .expanded .gif {
-    width: 400px;
+    width: 350px;
+    height: auto;
     transform: scale(1.8);
   }
 }
 
 @media only screen and (max-width: 481px) {
   .expanded .gif {
-    width: 300px;
+    width: 250px;
+    height: auto;
     transform: scale(1.6);
   }
 }
