@@ -27,7 +27,7 @@ npm test
 ```
 
 # Use
-See trending Gifs dislpayed on https://giphy.com/ or search to see your favorites.
+See trending Gifs dislpayed on https://giphy.com/ or search to see your favorites. Click to enlarge Gif for a better view.
 
 ![Giphy-home!](./src/styles/images/giphy-home.png)
 ![Giphy-tablet!](./src/styles/images/giphy-tablet.png)
