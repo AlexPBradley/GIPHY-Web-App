@@ -29,11 +29,13 @@
 @media only screen and (max-width: 768px) {
   .expanded .gif {
     width: 400px;
+    transform: scale(1.8);
   }
 }
 
 @media only screen and (max-width: 481px) {
   .expanded .gif {
     width: 300px;
+    transform: scale(1.6);
   }
 }
