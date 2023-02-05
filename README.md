@@ -2,10 +2,11 @@
 # Giphy Web App
 
 This project uses: 
-- Axios to fetch data from an api and display it in a UI
-- React hooks such as useState and useEffect
-- React testing library
-- Passing props to child components
+- Axios to fetch data from an api and display it in a UI.
+- React hooks such as useState and useEffect.
+- React testing library.
+- Passing props to child components.
+- Conditionally rendered components.
 
 # Install
 Clone the Repo
